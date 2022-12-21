@@ -16,7 +16,7 @@ export const Item = ({ image, title, species, titleBottom, known, seen }) => {
 				height={278}
 				alt={'Hello'}
 			/>
-			<div className="p-3 text-white d-block">
+			<div className="p-3 text-white d-block ">
 				<h3 className="h2 text-info">{title}</h3>
 				<p className="d-flex fw-bold fs-4">
 					{titleBottom} - <p> {species}</p>
@@ -31,6 +31,7 @@ export const Item = ({ image, title, species, titleBottom, known, seen }) => {
 					<span className="text-info">First seen in</span>
 					<p className="fw-bold fs-4">{seen}</p>
 				</div>
+				<button className="btn btn-success">More</button>
 			</div>
 		</li>
 	);

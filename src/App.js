@@ -1,13 +1,21 @@
-import { Card } from './Components/Card/Card';
+import { Header } from './Components/Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import { Character } from './pages/Character/Character';
+import { Location } from './pages/Location/Location';
+import { Episode } from './pages/Episode/Episode';
 
 function App() {
 	return (
-		<div style={{ backgroundColor: '#202329' }}>
-			<h1 className="text-center display-1 text-white py-5">
-				Rick and Morphy
-			</h1>
-			<Card />
-		</div>
+		<>
+			<Header />
+			<div className="pt-3">
+				<Routes>
+					<Route path="/" element={<Character />} />
+					<Route path="/episode" element={<Episode />}></Route>
+					<Route path="/location" element={<Location />}></Route>
+				</Routes>
+			</div>
+		</>
 	);
 }
 
